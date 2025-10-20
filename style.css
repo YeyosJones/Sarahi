@@ -1,4 +1,4 @@
-/* Fuente y colores */
+/* ===== FUENTE Y COLORES ===== */
 body {
   font-family: 'Poppins', sans-serif;
   background: #f7faff;
@@ -6,22 +6,26 @@ body {
   color: #222;
 }
 
-/* ENCABEZADO */
+/* ===== HEADER ===== */
 header {
   background: linear-gradient(rgba(0, 72, 128, 0.7), rgba(0, 72, 128, 0.7)), 
               url('banner.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  height: 90vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header h1 {
@@ -32,6 +36,8 @@ header h1 {
 header p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  max-width: 600px;
+  text-align: justify;
 }
 
 .btn-primary {
@@ -42,45 +48,78 @@ header p {
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn-primary:hover {
   background: #0077b6;
 }
 
-/* SOBRE ANA */
+/* Imagen pequeña dentro del header */
+header .image img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* ===== SOBRE SARAHI ===== */
 .about {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1rem;
   gap: 2rem;
+  padding: 3rem 1rem;
   background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.about h2 {
+.about .text {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about .text h2 {
   color: #0077b6;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.about p {
+.about .text p {
   line-height: 1.7;
+  max-width: 600px;
+  text-align: justify;
 }
 
-.about img {
+.about .image {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .image img {
   width: 280px;
   height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* DONACIONES */
+/* ===== DONACIONES ===== */
 .donar {
   text-align: center;
   background: #caf0f8;
   padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .donar h2 {
@@ -88,6 +127,38 @@ header p {
   margin-bottom: 1rem;
 }
 
+/* BARRA DE DONACIONES */
+.donation-bar {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.donation-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #023e8a;
+}
+
+.progress {
+  background: #e0e0e0;
+  border-radius: 30px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.progress-filled {
+  background: #00b4d8;
+  height: 100%;
+  width: 0%;
+  border-radius: 30px 0 0 30px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* BOTONES */
 .botones {
   display: flex;
   justify-content: center;
@@ -105,6 +176,7 @@ header p {
   text-decoration: none;
   color: white;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn-paypal { background: #0070ba; }
@@ -128,7 +200,7 @@ header p {
   display: block;
 }
 
-/* CONTACTO */
+/* ===== CONTACTO ===== */
 .contact {
   background: #fff;
   text-align: center;
@@ -171,7 +243,7 @@ input, textarea {
   background: #0077b6;
 }
 
-/* PIE DE PÁGINA */
+/* ===== PIE DE PÁGINA ===== */
 footer {
   background: #0077b6;
   color: white;
@@ -179,18 +251,45 @@ footer {
   padding: 1rem;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   header {
-    height: 70vh;
+    min-height: 60vh;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  header .image img {
+    width: 120px;
+    margin-bottom: 1rem;
   }
 
   .about {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .about img {
+  .about .text, .about .image {
+    max-width: 90%;
+  }
+
+  .about .image img {
     width: 80%;
-    max-width: 350px;
+    max-width: 280px;
+  }
+
+  .donation-bar {
+    width: 95%;
+  }
+
+  .botones {
+    flex-direction: column;
   }
 }
