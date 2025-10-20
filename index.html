@@ -8,8 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <div class="overlay">
+      <div class="image">
+        <img src="sarafoto2.png" alt="Foto de Sarahi">
+      </div>
       <h1>Ayudemos a Sarahi a seguir respirando</h1>
       <p>Sarahi es una joven valiente que, a pesar de su sonrisa y su espíritu fuerte, libra una batalla diaria contra una dura enfermedad.
 
@@ -28,6 +32,7 @@ Gracias por tomarte un momento para conocer su historia y por ser parte de esta 
     </div>
   </header>
 
+  <!-- SOBRE SARAHI -->
   <section class="about">
     <div class="text">
       <h2>Sobre Sarahi</h2>
@@ -55,13 +60,29 @@ Gracias por ser parte de este gesto de empatía y solidaridad. 💙
     </div>
   </section>
 
+  <!-- DONAR -->
   <section id="donar" class="donar">
     <h2>Formas de donar</h2>
     <p>Tu ayuda puede marcar la diferencia. Gracias por estar aquí.</p>
+
+    <!-- BARRA DE DONACIONES -->
+    <div class="donation-bar">
+      <div class="donation-text">
+        <span>Meta: $90,000 MXN</span>
+        <span id="amount-raised">$45,000 MXN</span>
+      </div>
+      <div class="progress">
+        <div class="progress-filled" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <!-- BOTONES -->
     <div class="botones">
       <a href="https://www.paypal.me/ejemplo" class="btn-paypal" target="_blank">💳 Donar con PayPal</a>
       <button class="btn-bank" onclick="toggleBank()">🏦 Ver cuenta bancaria</button>
     </div>
+
+    <!-- INFORMACIÓN DE CUENTA -->
     <div id="bank-info" class="bank-info">
       <p><strong>Banco:</strong> BBVA</p>
       <p><strong>Nombre:</strong> Sarahi Gutierrez Bautista </p>
@@ -70,6 +91,7 @@ Gracias por ser parte de este gesto de empatía y solidaridad. 💙
     </div>
   </section>
 
+  <!-- CONTACTO -->
   <section class="contact">
     <h2>Envíanos un mensaje de apoyo</h2>
     <form action="donate.php" method="POST">
@@ -80,15 +102,28 @@ Gracias por ser parte de este gesto de empatía y solidaridad. 💙
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>Gracias por tu apoyo 💙 | Unidos por Sarahi</p>
   </footer>
 
+  <!-- SCRIPTS -->
   <script>
     function toggleBank() {
       const info = document.getElementById('bank-info');
       info.classList.toggle('show');
     }
+
+    // ACTUALIZAR BARRA MANUALMENTE
+    const meta = 90000;       // meta total
+    const recaudado = 00000;  // cambia este número manualmente
+    const porcentaje = (recaudado / meta) * 100;
+
+    const progressBar = document.querySelector('.progress-filled');
+    const amountText = document.getElementById('amount-raised');
+
+    progressBar.style.width = porcentaje + '%';
+    amountText.textContent = '$' + recaudado.toLocaleString() + ' MXN';
   </script>
 </body>
 </html>
