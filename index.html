@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda para Sarahi 💙</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="overlay">
+      <h1>Ayudemos a Sarahi a seguir respirando</h1>
+      <p>Sarahi es una joven valiente que, a pesar de su sonrisa y su espíritu fuerte, libra una batalla diaria contra una dura enfermedad.
+
+Fue diagnosticada con síndrome antifosfolípido (SAF), una condición autoinmune que le provocó una tromboembolia pulmonar aguda, derivando en hipertensión pulmonar e insuficiencia respiratoria crónica.
+
+Hoy, Sarahi depende del oxígeno para poder respirar y seguir adelante. Cada inhalación representa un esfuerzo, y cada día, una lucha silenciosa por la vida.
+
+Su mayor deseo es poder adquirir un oxígeno portátil que le permita recuperar su libertad: salir, caminar, reír y vivir con un poco más de normalidad.
+
+Esta página nace con la esperanza de reunir el apoyo necesario para su tratamiento y para ese equipo que podría cambiarle la vida.
+
+💙 Cada donación, por pequeña que parezca, significa un respiro más para Sarahi.
+
+Gracias por tomarte un momento para conocer su historia y por ser parte de esta lucha. Tu ayuda puede marcar la diferencia entre la dificultad y la esperanza.</p>
+      <a href="#donar" class="btn-primary">Quiero ayudar</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="text">
+      <h2>Sobre Sarahi</h2>
+      <p>
+        Sarahi tiene 34 años, está casada y es una mujer llena de sueños, esperanza y amor por la vida.
+
+Hace un tiempo fue diagnosticada con síndrome antifosfolípido (SAF), una enfermedad autoinmune que le causó una tromboembolia pulmonar aguda, derivando en hipertensión pulmonar e insuficiencia respiratoria crónica.
+
+Desde entonces, su día a día está marcado por tratamientos médicos constantes y la necesidad de oxígeno para poder respirar. Sin embargo, a pesar de la dificultad, Sarahi no se rinde. Su fortaleza y su sonrisa siguen siendo ejemplo de lucha para quienes la rodean.
+
+Su mayor deseo es poder adquirir un oxígeno portátil, que le permita recuperar parte de su independencia, salir al aire libre y disfrutar de los pequeños momentos que hacen que la vida valga la pena.
+
+Esta campaña busca brindar apoyo para cubrir su tratamiento y ayudarle a tener una mejor calidad de vida.
+
+💙 Cada donación es un respiro, una muestra de amor y una esperanza renovada para Sarahi.
+
+Gracias por ser parte de este gesto de empatía y solidaridad. 💙
+      </p>
+    </div>
+    <div class="image">
+      <img src="sarafoto.png" alt="Foto de Sarahi">
+    </div>
+    <div class="image">
+      <img src="sarafoto2.png" alt="Foto de Sarahi">
+    </div>
+  </section>
+
+  <section id="donar" class="donar">
+    <h2>Formas de donar</h2>
+    <p>Tu ayuda puede marcar la diferencia. Gracias por estar aquí.</p>
+    <div class="botones">
+      <a href="https://www.paypal.me/ejemplo" class="btn-paypal" target="_blank">💳 Donar con PayPal</a>
+      <button class="btn-bank" onclick="toggleBank()">🏦 Ver cuenta bancaria</button>
+    </div>
+    <div id="bank-info" class="bank-info">
+      <p><strong>Banco:</strong> BBVA</p>
+      <p><strong>Nombre:</strong> Sarahi Gutierrez Bautista </p>
+      <p><strong>CLABE:</strong> 012345678901234567</p>
+      <p><strong>Cuenta:</strong> 1234567890</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Envíanos un mensaje de apoyo</h2>
+    <form action="donate.php" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" placeholder="Tu mensaje de apoyo" required></textarea>
+      <button type="submit" class="btn-submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Gracias por tu apoyo 💙 | Unidos por Sarahi</p>
+  </footer>
+
+  <script>
+    function toggleBank() {
+      const info = document.getElementById('bank-info');
+      info.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
